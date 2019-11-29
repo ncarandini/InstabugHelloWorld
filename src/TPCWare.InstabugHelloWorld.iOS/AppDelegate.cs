@@ -23,7 +23,7 @@ namespace TPCWare.InstabugHelloWorld.iOS
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
 
-            if (!Keys.IsInstabugEnabled)
+            if (Keys.IsInstabugEnabled)
             {
                 Instabug.StartWithToken(Keys.InstabugToken, IBGInvocationEvent.FloatingButton | IBGInvocationEvent.Shake | IBGInvocationEvent.Screenshot);
             }
